@@ -13,7 +13,7 @@ def get_list_of_files(directory):
     # make directory of files
     file_dict = {}
     for i,file in enumerate(files):
-        file_dict[i] = directory + "/" + file
+        file_dict[i] = file
     return file_dict
 
 def convert_image_to_base64(image_path):
