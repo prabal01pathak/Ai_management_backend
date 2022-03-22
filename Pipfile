@@ -12,6 +12,8 @@ python-jose = {extras = ["cryptography"], version = "*"}
 passlib = {extras = ["bcrypt"], version = "*"}
 
 [dev-packages]
+pytest = "*"
+requests = "*"
 
 [requires]
 python_version = "3.9"

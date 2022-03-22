@@ -1,0 +1,26 @@
+<annotation>
+	<folder>labelImg-sjjqz28s-tmp</folder>
+	<filename>11photos.jpg</filename>
+	<path>C:\Users\hp\AppData\Local\Temp\labelImg-sjjqz28s-tmp\11photos.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>5785</width>
+		<height>3857</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1410</xmin>
+			<ymin>636</ymin>
+			<xmax>3722</xmax>
+			<ymax>1896</ymax>
+		</bndbox>
+	</object>
+</annotation>

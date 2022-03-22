@@ -1,0 +1,26 @@
+<annotation>
+	<folder>labelImg-58t0orrt-tmp</folder>
+	<filename>22photos.jpg</filename>
+	<path>C:\Users\hp\AppData\Local\Temp\labelImg-58t0orrt-tmp\22photos.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3456</width>
+		<height>5184</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dog</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1494</xmin>
+			<ymin>371</ymin>
+			<xmax>2930</xmax>
+			<ymax>3050</ymax>
+		</bndbox>
+	</object>
+</annotation>
