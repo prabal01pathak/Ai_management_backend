@@ -1,5 +1,9 @@
 .pyc
 __pycache__/
 .env
-
+aimanagementTollFirebase.json
+untitled*
+google_cloud_functions/
+annotations/
+Users/
 

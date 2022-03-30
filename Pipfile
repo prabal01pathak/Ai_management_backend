@@ -10,10 +10,13 @@ python-multipart = "*"
 sqlalchemy = "*"
 python-jose = {extras = ["cryptography"], version = "*"}
 passlib = {extras = ["bcrypt"], version = "*"}
+shareplum = "*"
+firebase-admin = "*"
 
 [dev-packages]
 pytest = "*"
 requests = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.9"

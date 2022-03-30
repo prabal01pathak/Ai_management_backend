@@ -4,14 +4,14 @@ from fastapi.responses import JSONResponse, StreamingResponse, FileResponse
 import os
 import sys
 import shutil
-from directory_utils import (
-    get_list_of_files, 
-    convert_image_to_base64, 
-    make_annotations_path, 
-    get_total_annotations_done,
-    projects,
-    check_annotations_exist,
-)
+from sharepoint_utils.directory_utils import (
+        get_list_of_files, 
+        convert_image_to_base64, 
+        make_annotations_path, 
+        get_total_annotations_done,
+        projects,
+        check_annotations_exist,
+    )
 from authentication.auth_utils import router, get_current_user, get_current_active_user
 from authentication.schema import User
 #import sqlalchemy

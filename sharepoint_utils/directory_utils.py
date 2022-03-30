@@ -4,8 +4,20 @@ from pathlib import Path
 import zipfile
 import io
 from fastapi.responses import StreamingResponse
+from shareplum import Site
+from shareplum import Office365
+from shareplum.site import Version
 
+
+email= os.environ['EMAIL']
+password = os.environ["PASSWORD"]
+site = "ML_team-BioconPoc/"
+
+authcookie = Office365(f'https://resoluteaisoftware.sharepoint.com', username=email, password=password).GetCookies()
+
+site = Site(f'https://resoluteaisoftware.sharepoint.com/sites/{site}', version=Version.v365, authcookie=authcookie)
 #fake data
+
 projects = {
     1: "NLP",
     2: "ML",
@@ -13,16 +25,23 @@ projects = {
     4: "Deep Learning",
     5: "New Project",
     6: "#3rd Project",
+    7: "#4th Project",
+    8: "#5th Project",
+    9: "#6th Project",
 }
 #=======
 
+base_dir = os.path.dirname(os.path.abspath(__file__)).replace('\\','/').split('/')[:-1]
+home_dir = os.path.join(*base_dir)
+# go one directory up
 
-def get_list_of_files(directory):
+def get_list_of_files(directory: str) -> dict:
     """
     Returns a list of all files in a directory
     :param directory:
     :return:
     """
+    print(directory)
     files = os.listdir(directory)
     # make directory of files
     file_dict = {}
@@ -30,7 +49,7 @@ def get_list_of_files(directory):
         file_dict[i] = file
     return file_dict
 
-def convert_image_to_base64(image_path):
+def convert_image_to_base64(image_path: str) -> str:
     """
     Converts an image to base64
     :param image_path:
@@ -41,8 +60,14 @@ def convert_image_to_base64(image_path):
     return encoded_string
 
 
-def make_annotations_path(username,project_id):
-    annotations_path = os.path.join(os.getcwd(),'annotations',username)
+def make_annotations_path(username: str ,project_id: int) -> str:
+    """
+    Creates the path to the annotations file
+    :param username:
+    :param project_id:
+    :return: path
+    """
+    annotations_path = os.path.join(home_dir,'annotations',username)
     if not os.path.exists(annotations_path):
         os.makedirs(annotations_path)
         print('annotations directory created')
@@ -53,12 +78,12 @@ def make_annotations_path(username,project_id):
         os.makedirs(annotations_path)
     return annotations_path
 
-def get_total_annotations_done(annotations_path):
+def get_total_annotations_done(annotations_path: str) -> dict:
     files = get_list_of_files(annotations_path)
     return files
 
-def check_annotations_exist(user,project_id,annotation_id):
-    application_home_dir = os.path.dirname(os.path.abspath(__file__))
+def check_annotations_exist(user: str ,project_id: int, annotation_id: int):
+    application_home_dir = home_dir
     path = os.path.join(application_home_dir,'annotations',user,projects[int(project_id)])
     annotations = get_total_annotations_done(path).keys()
     if annotation_id in annotations:
