@@ -13,6 +13,7 @@ projects = {
     4: "Deep Learning",
     5: "New Project",
     6: "#3rd Project",
+    7: "#4th Project",
 }
 #=======
 
