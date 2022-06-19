@@ -25,7 +25,8 @@ application_home_dir = os.path.dirname(os.path.abspath(__file__))
 path_of_images = os.path.join(application_home_dir, 'images')
 images_dict = get_list_of_files(path_of_images)
 
-app.include_router(router, prefix="/auth")
+# app.include_router(router, prefix="/auth")
+app.include_router(router)
 
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):
