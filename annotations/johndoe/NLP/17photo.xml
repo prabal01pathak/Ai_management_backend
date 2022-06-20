@@ -1,0 +1,26 @@
+<annotation>
+	<folder>labelImg-5s0likv_-tmp</folder>
+	<filename>17photo.jpg</filename>
+	<path>/tmp/labelImg-5s0likv_-tmp/17photo.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>5580</width>
+		<height>3720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2116</xmin>
+			<ymin>472</ymin>
+			<xmax>3704</xmax>
+			<ymax>1716</ymax>
+		</bndbox>
+	</object>
+</annotation>
